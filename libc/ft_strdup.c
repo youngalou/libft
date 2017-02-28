@@ -6,7 +6,7 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 09:53:56 by lyoung            #+#    #+#             */
-/*   Updated: 2017/02/27 13:28:40 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/02/28 15:09:45 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@ char	*ft_strdup(const char *str)
 
 	i = 0;
 	dupl = (char*)malloc(sizeof(dupl) * ft_strlen(str));
+	if (!dupl)
+		return (NULL);
 	while (str[i])
 	{
 		dupl[i] = str[i];
 		i++;
 	}
-	free(dupl);
 	return (dupl);
 }

@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 13:12:52 by lyoung            #+#    #+#             */
-/*   Updated: 2017/02/28 12:28:18 by lyoung           ###   ########.fr       */
+/*   Created: 2017/02/28 12:36:39 by lyoung            #+#    #+#             */
+/*   Updated: 2017/02/28 13:06:18 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int		i;
+	int		j;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i] && i + 1 < n)
+	j = 0;
+	while (s1[i])
 		i++;
-	return(s1[i] - s2[i]);
+	while (s2[j])
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	return (s1);
 }
