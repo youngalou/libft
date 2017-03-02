@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lyoung <lyoung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/28 15:54:50 by lyoung            #+#    #+#             */
-/*   Updated: 2017/02/28 16:15:18 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/01 09:30:22 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/01 11:10:52 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int		ft_isalnum(int c)
 {
-	int		i;
-	size_t	lendst;
-	size_t	lensrc;
-
-	i = 0;
-	lendst = ft_strlen(dst);
-	lensrc = ft_strlen(src);
+	if (ft_isalpha(c))
+		return (1);
+	else if (ft_isdigit(c))
+		return (1);
+	return (0);
 }

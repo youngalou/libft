@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 09:53:56 by lyoung            #+#    #+#             */
-/*   Updated: 2017/02/28 15:09:45 by lyoung           ###   ########.fr       */
+/*   Created: 2017/02/27 09:48:05 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/01 15:33:05 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-char	*ft_strdup(const char *str)
+void	ft_putchar(unsigned char c)
 {
-	int		i;
-	char	*dupl;
-
-	i = 0;
-	dupl = (char*)malloc(sizeof(dupl) * ft_strlen(str));
-	if (!dupl)
-		return (NULL);
-	while (str[i])
-	{
-		dupl[i] = str[i];
-		i++;
-	}
-	return (dupl);
+	write(1, &c, 1);
 }
