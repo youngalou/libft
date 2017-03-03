@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyoung <lyoung@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 09:30:22 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/02 09:40:05 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/02 11:48:35 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/02 11:54:49 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalnum(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	return ((ft_isalpha(c) || ft_isdigit(c)) ? 1 : 0);
+	size_t	i;
+	char	*str;
+
+	i = 0;
+	str = (char*)s;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
 }

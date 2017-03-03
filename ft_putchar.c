@@ -6,13 +6,13 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 09:48:05 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/01 15:33:05 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/02 13:24:44 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(unsigned char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }

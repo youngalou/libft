@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyoung <lyoung@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 09:30:22 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/02 09:40:05 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/03 12:23:10 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/03 13:31:09 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalnum(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	return ((ft_isalpha(c) || ft_isdigit(c)) ? 1 : 0);
+	size_t				i;
+	unsigned char		ch;
+	unsigned const char	*str;
+
+	i = 0;
+	ch = (unsigned char)c;
+	str = (unsigned char*)s;
+	while (i < n && str[i] != ch)
+		i++;
+	if (str[i] == ch)
+		return ((void*)s + i);
+	return (0);
 }
