@@ -6,14 +6,14 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/05 11:20:05 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/05 11:36:15 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/05 15:43:44 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
 	if (!s || !f)
-		return;
+		return ;
 	while (*s)
 		f(s++);
 }

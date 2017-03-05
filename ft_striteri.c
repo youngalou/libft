@@ -6,7 +6,7 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/05 11:39:35 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/05 11:53:50 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/05 15:45:15 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 
 	i = 0;
 	if (!s || !f)
-		return;
+		return ;
 	while (*s)
 		f(i++, s++);
 }
