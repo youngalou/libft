@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchar.c                                      :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/03 13:39:41 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/03 14:49:25 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/05 11:39:35 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/05 11:53:50 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *str, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int		i;
-	int		res;
+	unsigned int	i;
 
 	i = 0;
-	res = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			res = i;
-		i++;
-	}
-	if (res != 0)
-		return ((char*)str + res);
-	return (0);
+	if (!s || !f)
+		return;
+	while (*s)
+		f(i++, s++);
 }

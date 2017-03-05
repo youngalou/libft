@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 12:21:05 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/05 09:25:18 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/05 11:08:50 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/05 11:39:07 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *str, int c)
+void	ft_strclr(char *s)
 {
-	int		i;
-
-	i = 0;
-	while (str[i])
+	if (!s)
+		return;
+	while (*s != '\0')
 	{
-		if (str[i] == c)
-			return ((char*)str + i);
-		i++;
+		*s = '\0';
+		s++;
 	}
-	if (str[i] == c)
-		return ((char*)str + i);
-	return (0);
 }

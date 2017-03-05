@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 12:21:05 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/05 09:25:18 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/05 11:20:05 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/05 11:36:15 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *str, int c)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	int		i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			return ((char*)str + i);
-		i++;
-	}
-	if (str[i] == c)
-		return ((char*)str + i);
-	return (0);
+	if (!s || !f)
+		return;
+	while (*s)
+		f(s++);
 }

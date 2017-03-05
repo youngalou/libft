@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 12:21:05 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/05 09:25:18 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/05 10:46:17 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/05 12:42:49 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *str, int c)
-{
-	int		i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			return ((char*)str + i);
-		i++;
-	}
-	if (str[i] == c)
-		return ((char*)str + i);
-	return (0);
+char	*ft_strnew(size_t size)
+{
+	char	*str;
+
+	str = (char*)malloc(size + 1);
+	if (str == NULL)
+		return (0);
+	ft_memset(str, '\0', size + 1);
+	return (str);
 }

@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 12:21:05 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/05 09:25:18 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/05 09:51:38 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/05 11:16:09 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *str, int c)
-{
-	int		i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			return ((char*)str + i);
-		i++;
-	}
-	if (str[i] == c)
-		return ((char*)str + i);
-	return (0);
+void	*ft_memalloc(size_t size)
+{
+	void	*mem;
+
+	mem = malloc(size);
+	if (mem == NULL)
+		return (0);
+	ft_memset(mem, 0, size);
+	return (mem);
 }
