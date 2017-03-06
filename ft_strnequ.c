@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 14:51:38 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/06 14:32:39 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/06 13:38:42 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/06 13:45:48 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *s)
+int		ft_strnequ(const char *s1, const char *s2, size_t n)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
-	if (!s)
-		return ;
-	while (s[i])
+	if (!s1 || !s2)
+		return (0);
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		ft_putchar(s[i]);
+		if (s1[i] != s2[i])
+			return (0);
 		i++;
 	}
+	return (1);
 }

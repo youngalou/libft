@@ -6,7 +6,7 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 10:33:17 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/05 11:44:46 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/06 14:34:08 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-/*--------------- Part 1 ---------------*/
+/* --------------- Part 1 --------------- */
 
-void	ft_putchar(char c);
-size_t	ft_strlen(const char *str);
 char	*ft_strdup(const char *str);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
@@ -48,7 +46,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_bzero(void *s, size_t n);
 int		ft_isspace(int c);
 
-/*--------------- Part 2 ---------------*/
+/* --------------- Part 2 --------------- */
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
@@ -57,7 +55,18 @@ void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-char	*ft_strmap(char const *s, char (*f)(char));
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmap(const char *s, char (*f)(char));
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+int		ft_strequ(const char *s1, const char *s2);
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
+char	*ft_strsub(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
+
+void	ft_putchar(char c);
+void	ft_putstr(const char *s);
+void	ft_putendl(char const *s);
+void	ft_putnbr(int n);
+
+size_t	ft_strlen(const char *str);
 
 #endif
