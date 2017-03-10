@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/08 09:42:38 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/08 15:04:34 by lyoung           ###   ########.fr       */
+/*   Created: 2017/03/07 14:35:52 by lyoung            #+#    #+#             */
+/*   Updated: 2017/03/09 14:29:19 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int		count_words(const char *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
-			i++;
 		while (s[i] != c)
+			i++;
+		while (s[i] == c)
 			i++;
 		count++;
 	}
@@ -46,28 +46,33 @@ int		count_letters(const char *s, char c, int i)
 char	**ft_strsplit(const char *s, char c)
 {
 	int		i;
-	int		j;
-	int		len;
+	int		a;
+	int		b;
 	char	**tab;
 
 	i = 0;
-	j = 0;
-	len = 0;
+	a = 0;
 	if (!s)
 		return (0);
-	tab = (char**)malloc(count_words(s, c));
+	tab = (char**)malloc(count_words(s, c) + 1);
 	if (!tab)
 		return (0);
-	while (s[i] && j < count_words(s, c))
+	while (s[i] == c && s[i] != '\0')
+		i++;
+	while (s[i] && a < count_words(s, c))
 	{
-		while (s[i] == c)
-			i++;
-		len = count_letters(s, c, i);
-		tab[j] = ft_strsub(s, i, len);
-		if (!tab[j])
-			return (0);
-		i = i + len;
-		j++;
+		 b = 0;
+		 tab[a] = (char*)malloc(count_letters(s, c, i));
+		 while (s[i] != c && s[i] != '\0')
+		 {
+			 tab[a][b] = s[i];
+			 b++;
+			 i++;
+		 }
+		 while (s[i] == c && s[i] != '\0')
+			 i++;
+		 a++;
 	}
+	tab[a] = 0;
 	return (tab);
 }
