@@ -6,13 +6,13 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/07 11:49:11 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/07 14:22:56 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/12 09:53:26 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		trim_front(const char *s)
+static int		trim_front(const char *s)
 {
 	int		i;
 
@@ -22,7 +22,7 @@ int		trim_front(const char *s)
 	return (i);
 }
 
-int		trim_end(const char *s)
+static int		trim_end(const char *s)
 {
 	int		i;
 	int		count;
@@ -37,7 +37,7 @@ int		trim_end(const char *s)
 	return (count);
 }
 
-char	*ft_strtrim(const char *s)
+char			*ft_strtrim(const char *s)
 {
 	int		i;
 	int		j;

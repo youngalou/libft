@@ -6,73 +6,69 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/07 14:35:52 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/09 14:29:19 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/12 09:51:05 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		count_words(const char *s, char c)
+static int		count_words(const char *s, char c)
 {
-	int		i;
+	int		count;
+	int		in_sub;
+
+	count = 0;
+	in_sub = 0;
+	while (*s)
+	{
+		if (*s == c && in_sub == 1)
+			in_sub = 0;
+		if (*s != c && in_sub == 0)
+		{
+			in_sub = 1;
+			count++;
+		}
+		s++;
+	}
+	return (count);
+}
+
+static int		count_letters(const char *s, char c)
+{
 	int		count;
 
-	i = 0;
 	count = 0;
-	while (s[i])
+	while (*s && *s != c)
 	{
-		while (s[i] != c)
-			i++;
-		while (s[i] == c)
-			i++;
+		s++;
 		count++;
 	}
 	return (count);
 }
 
-int		count_letters(const char *s, char c, int i)
-{
-	int		count;
-
-	count = 0;
-	while (s[i] && s[i] != c)
-	{
-		i++;
-		count++;
-	}
-	return (count);
-}
-
-char	**ft_strsplit(const char *s, char c)
+char			**ft_strsplit(const char *s, char c)
 {
 	int		i;
-	int		a;
-	int		b;
+	int		words;
 	char	**tab;
 
-	i = 0;
-	a = 0;
-	if (!s)
+	if (!s || !c)
 		return (0);
-	tab = (char**)malloc(count_words(s, c) + 1);
+	i = 0;
+	words = count_words(s, c);
+	tab = (char**)malloc(sizeof(tab) * words + 1);
 	if (!tab)
 		return (0);
-	while (s[i] == c && s[i] != '\0')
-		i++;
-	while (s[i] && a < count_words(s, c))
+	while (words--)
 	{
-		 b = 0;
-		 tab[a] = (char*)malloc(count_letters(s, c, i));
-		 while (s[i] != c && s[i] != '\0')
-		 {
-			 tab[a][b] = s[i];
-			 b++;
-			 i++;
-		 }
-		 while (s[i] == c && s[i] != '\0')
-			 i++;
-		 a++;
+		while (*s && *s == c)
+			s++;
+		tab[i] = ft_strsub(s, 0, count_letters(s, c));
+		if (!tab[i])
+			return (0);
+		s = s + count_letters(s, c);
+		i++;
 	}
-	tab[a] = 0;
+	tab[i] = 0;
 	return (tab);
 }
