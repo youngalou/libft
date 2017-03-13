@@ -6,11 +6,12 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/08 10:29:35 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/12 09:53:00 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/13 16:02:53 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int		count_digits(int n)
 {
