@@ -6,54 +6,45 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/08 10:29:35 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/13 16:02:53 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/14 14:47:26 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static int		count_digits(int n)
+static size_t	count_digits(long n)
 {
-	int		count;
+	size_t		count;
 
-	count = 0;
-	if (n == 0)
-		return (2);
-	if (n < 0)
+	count = 1;
+	while ((n = n / 10) > 0)
 		count++;
-	while (n != 0)
-	{
-		n = n / 10;
-		count++;
-	}
-	return (count + 1);
+	return (count);
 }
 
 char			*ft_itoa(int n)
 {
+	int		neg;
+	long	nb;
 	int		len;
 	char	*str;
-	long	nb;
 
-	len = count_digits(n);
-	str = (char*)malloc(len);
+	neg = (n >= 0) ? 0 : 1;
 	nb = n;
+	nb = (neg == 0) ? nb : -nb;
+	len = count_digits(nb);
+	str = (char*)malloc(len * sizeof(char));
 	if (!str)
 		return (0);
-	len--;
-	str[len] = '\0';
-	len--;
-	if (nb < 0)
-	{
+	if (neg == 1)
 		str[0] = '-';
-		nb = -nb;
-	}
-	while (len >= 0 && str[len] != '-')
+	len = (neg == 0) ? len : len + 1;
+	str[len] = '\0';
+	while (len > neg)
 	{
+		len--;
 		str[len] = (nb % 10) + '0';
 		nb = nb / 10;
-		len--;
 	}
 	return (str);
 }
