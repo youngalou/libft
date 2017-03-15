@@ -6,7 +6,7 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/08 10:29:35 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/14 14:47:26 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/15 11:28:32 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ char			*ft_itoa(int n)
 	nb = n;
 	nb = (neg == 0) ? nb : -nb;
 	len = count_digits(nb);
-	str = (char*)malloc(len * sizeof(char));
+	len = (neg == 0) ? len : len + 1;
+	str = (char*)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (0);
 	if (neg == 1)
 		str[0] = '-';
-	len = (neg == 0) ? len : len + 1;
 	str[len] = '\0';
 	while (len > neg)
 	{
