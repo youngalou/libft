@@ -6,7 +6,7 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/08 10:29:35 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/15 11:28:32 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/03/15 11:20:11 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	count_digits(long n)
 	size_t		count;
 
 	count = 1;
-	while ((n = n / 10) > 0)
+	while ((n = n / 10) != 0)
 		count++;
 	return (count);
 }
