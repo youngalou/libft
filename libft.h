@@ -42,6 +42,7 @@ void				ft_putnbr_fd(int n, int fd);
 
 size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *str);
+char				*ft_strndup(const char *src, size_t len);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 int					ft_strcmp(const char *s1, const char *s2);

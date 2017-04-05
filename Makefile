@@ -22,6 +22,7 @@ SRCS = ft_putchar.c \
 	   ft_putnbr_fd.c \
 	   ft_strlen.c \
 	   ft_strdup.c \
+	   ft_strndup.c \
 	   ft_strcpy.c \
 	   ft_strncpy.c \
 	   ft_strcmp.c \
