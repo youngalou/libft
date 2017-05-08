@@ -6,7 +6,7 @@
 #    By: lyoung <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/27 10:39:14 by lyoung            #+#    #+#              #
-#    Updated: 2017/03/14 13:42:17 by lyoung           ###   ########.fr        #
+#    Updated: 2017/05/08 12:27:41 by lyoung           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCS = ft_putchar.c \
 	   ft_putnbr_fd.c \
 	   ft_strlen.c \
 	   ft_strdup.c \
+	   ft_strndup.c \
 	   ft_strcpy.c \
 	   ft_strncpy.c \
 	   ft_strcmp.c \
@@ -44,6 +45,7 @@ SRCS = ft_putchar.c \
 	   ft_strnequ.c \
 	   ft_strsub.c \
 	   ft_strjoin.c \
+	   ft_strnjoin.c \
 	   ft_strtrim.c \
 	   ft_strsplit.c \
 	   ft_isalpha.c \
@@ -65,6 +67,7 @@ SRCS = ft_putchar.c \
 	   ft_toupper.c \
 	   ft_tolower.c \
 	   ft_itoa.c \
+	   ft_itoa_base.c \
 	   ft_lstnew.c \
 	   ft_lstdelone.c \
 	   ft_lstdel.c \

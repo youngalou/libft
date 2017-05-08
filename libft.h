@@ -6,7 +6,7 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 10:33:17 by lyoung            #+#    #+#             */
-/*   Updated: 2017/03/13 15:47:56 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/05/08 12:22:23 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void				ft_putnbr_fd(int n, int fd);
 
 size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *str);
+char				*ft_strndup(const char *src, size_t len);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
@@ -65,6 +66,7 @@ int					ft_strequ(const char *s1, const char *s2);
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strjoin(const char *s1, const char *s2);
+char				*ft_strnjoin(const char *s1, const char *s2, size_t n);
 char				*ft_strtrim(const char *s);
 char				**ft_strsplit(const char *s, char c);
 
@@ -100,7 +102,8 @@ void				ft_memdel(void **ap);
 int					ft_atoi(char *str);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-char				*ft_itoa(int n);
+char				*ft_itoa(long long n);
+char				*ft_itoa_base(long long value, int base);
 
 /*
 ** --------------- List Functions ---------------
