@@ -6,13 +6,14 @@
 #    By: lyoung <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/27 10:39:14 by lyoung            #+#    #+#              #
-#    Updated: 2017/06/06 12:38:31 by lyoung           ###   ########.fr        #
+#    Updated: 2017/06/06 13:18:58 by lyoung           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CFLAG = -Wall -Wextra -Werror
-SRCS = ft_putchar.c \
+
+LIBFT = ft_putchar.c \
 	   ft_putstr.c \
 	   ft_putendl.c \
 	   ft_putnbr.c \
@@ -76,7 +77,25 @@ SRCS = ft_putchar.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
 
-OBJS = $(SRCS:.c=.o)
+GET_NEXT_LINE = get_next_line.c
+
+FT_PRINTF = ft_printf.c \
+			ft_vprintf.c \
+			build.c \
+			modifiers.c \
+			conversions.c \
+			handle_length.c \
+			handle_diuox.c \
+			handle_scp.c \
+			handle_extra.c \
+
+FILES = $(addprefix libft/, $(LIBFT)) \
+		$(addprefix get_next_line/, $(GET_NEXT_LINE)) \
+		$(addprefix ft_printf/, $(FT_PRINTF)) \
+
+SRCS = $(addprefix src/, $(FILES))
+
+OBJS = *.o
 
 all: $(NAME)
 

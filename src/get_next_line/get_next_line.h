@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/06 13:21:39 by lyoung            #+#    #+#             */
-/*   Updated: 2017/06/06 13:23:39 by lyoung           ###   ########.fr       */
+/*   Created: 2017/04/06 15:27:37 by lyoung            #+#    #+#             */
+/*   Updated: 2017/06/06 13:14:11 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# include "../libft/libft.h"
+# include <fcntl.h>
+# define BUFF_SIZE 16
 
-# include "src/libft/libft.h"
-# include "src/get_next_line/get_next_line.h"
-# include "src/ft_printf/libftprintf.h"
+int		get_next_line(const int fd, char **line);
 
 #endif
