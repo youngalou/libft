@@ -6,11 +6,11 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 10:53:12 by lyoung            #+#    #+#             */
-/*   Updated: 2017/05/25 14:18:16 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/06/06 13:44:07 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libftprintf.h"
 
 char		*handle_length(t_args *mod, char *spec)
 {

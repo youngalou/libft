@@ -6,11 +6,11 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/31 10:46:06 by lyoung            #+#    #+#             */
-/*   Updated: 2017/06/02 10:27:42 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/06/06 13:43:55 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libftprintf.h"
 
 char	*handle_diuox(t_res *res, va_list ap, t_args *mod, char *spec)
 {

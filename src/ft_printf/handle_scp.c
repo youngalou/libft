@@ -6,11 +6,11 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/31 11:14:23 by lyoung            #+#    #+#             */
-/*   Updated: 2017/06/01 12:59:55 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/06/06 13:44:12 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libftprintf.h"
 
 char	*handle_scp(t_res *res, va_list ap, t_args *mod, char *spec)
 {

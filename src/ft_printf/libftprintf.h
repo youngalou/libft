@@ -6,7 +6,7 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/18 13:44:15 by lyoung            #+#    #+#             */
-/*   Updated: 2017/06/02 15:47:52 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/06/06 13:45:06 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdarg.h>
 # include <limits.h>
 # include <stdint.h>
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 
 # define F_SCP (*spec == 's' || *spec == 'c' || *spec == 'C' || *spec == 'p')
 # define F_DI (*spec == 'd' || *spec == 'D' || *spec == 'i')

@@ -6,11 +6,11 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/02 11:48:28 by lyoung            #+#    #+#             */
-/*   Updated: 2017/06/02 12:31:03 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/06/06 13:43:46 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libftprintf.h"
 
 int		ft_vasprintf(char **ret, const char *fmt, va_list ap)
 {

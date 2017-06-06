@@ -6,11 +6,11 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/19 11:24:26 by lyoung            #+#    #+#             */
-/*   Updated: 2017/06/02 12:30:25 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/06/06 13:43:40 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libftprintf.h"
 
 int		ft_asprintf(char **ret, const char *fmt, ...)
 {

@@ -6,11 +6,11 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 13:49:53 by lyoung            #+#    #+#             */
-/*   Updated: 2017/05/31 13:37:43 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/06/06 13:43:22 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libftprintf.h"
 
 t_res	*init_res(size_t cap)
 {

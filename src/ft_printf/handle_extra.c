@@ -6,11 +6,11 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/31 11:36:36 by lyoung            #+#    #+#             */
-/*   Updated: 2017/06/02 10:10:28 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/06/06 13:44:01 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libftprintf.h"
 
 char		*add_padding(char *s, int len, t_args *mod)
 {
