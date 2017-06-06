@@ -6,7 +6,7 @@
 #    By: lyoung <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/27 10:39:14 by lyoung            #+#    #+#              #
-#    Updated: 2017/05/08 12:27:41 by lyoung           ###   ########.fr        #
+#    Updated: 2017/06/06 12:38:31 by lyoung           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ SRCS = ft_putchar.c \
 	   ft_tolower.c \
 	   ft_itoa.c \
 	   ft_itoa_base.c \
+	   ft_uinttoa_base.c \
 	   ft_lstnew.c \
 	   ft_lstdelone.c \
 	   ft_lstdel.c \

@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_uinttoa_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 12:38:04 by lyoung            #+#    #+#             */
-/*   Updated: 2017/05/31 14:59:58 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/05/31 14:42:04 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*build_str(intmax_t nb, int base, int digit, int neg_flag)
+char	*ft_uinttoa_base(uintmax_t value, int base)
 {
+	uintmax_t	nb;
+	int			digit;
 	char		*ret;
-	intmax_t	base_var;
 
-	base_var = 1;
-	while (nb >= base_var)
+	nb = value;
+	digit = 0;
+	if (nb == 0)
+		return (ft_strdup("0"));
+	while (value)
 	{
-		base_var = base * base_var;
+		value = value / base;
 		digit++;
 	}
-	ret = (char*)malloc(sizeof(ret) * (digit + 1));
-	ret[digit] = '\0';
+	ret = ft_strnew(digit);
 	digit--;
-	(neg_flag) ? ret[0] = '-' : 0;
 	while (nb > 0)
 	{
 		if (nb % base > 9)
@@ -37,27 +39,4 @@ char	*build_str(intmax_t nb, int base, int digit, int neg_flag)
 		digit--;
 	}
 	return (ret);
-}
-
-char	*ft_itoa_base(intmax_t value, int base)
-{
-	intmax_t	nb;
-	int			digit;
-	int			neg_flag;
-
-	nb = value;
-	digit = 0;
-	neg_flag = 0;
-	if (nb == 0)
-		return (ft_strdup("0"));
-	if (nb < 0)
-	{
-		nb = -nb;
-		if (base == 10)
-		{
-			digit++;
-			neg_flag = 1;
-		}
-	}
-	return (build_str(nb, base, digit, neg_flag));
 }

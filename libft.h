@@ -6,7 +6,7 @@
 /*   By: lyoung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 10:33:17 by lyoung            #+#    #+#             */
-/*   Updated: 2017/05/08 12:22:23 by lyoung           ###   ########.fr       */
+/*   Updated: 2017/06/06 12:39:25 by lyoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,8 +102,9 @@ void				ft_memdel(void **ap);
 int					ft_atoi(char *str);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-char				*ft_itoa(long long n);
-char				*ft_itoa_base(long long value, int base);
+char				*ft_itoa(intmax_t n);
+char				*ft_itoa_base(intmax_t value, int base);
+char				*ft_uinttoa_base(uintmax_t value, int base);
 
 /*
 ** --------------- List Functions ---------------
